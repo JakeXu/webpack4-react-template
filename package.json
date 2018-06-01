@@ -10,7 +10,8 @@
     "remove:build": "rimraf dist"
   },
   "keywords": [
-    "react"
+    "react",
+    "template"
   ],
   "author": "jake",
   "license": "ISC",
@@ -32,7 +33,6 @@
     "file": "^0.2.2",
     "file-loader": "^1.1.11",
     "happypack": "^5.0.0",
-    "html-webpack-include-assets-plugin": "^1.0.4",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.9.0",

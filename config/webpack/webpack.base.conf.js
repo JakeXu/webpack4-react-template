@@ -4,7 +4,7 @@ const entryDir = resolve('../../src/entry')
 const webpackFile = require('./webpack.file.conf');
 // const dirVars = require('./dir_vars.config')
 const options = {
-    cwd: entryDir,
+    cwd: resolve('../../src/entry'),
     sync: true
 }
 const json = require('../../package.json');//引进package.json
@@ -50,7 +50,7 @@ pageEntries.forEach((page) => {
     entries[name] = path.join(entryDir, page)
     plugins.push(new HtmlWebpackPlugin({
         // version: dirVars.version,
-        template: resolve(`../../template/${name}.html`),
+        template: resolve(`../../dll/${name}.html`),
         // favicon: resolve('../../src/public/img/favicon.ico'),
         inject: 'body',
         filename: `${name}.html`,

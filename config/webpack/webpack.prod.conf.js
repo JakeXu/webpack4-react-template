@@ -4,7 +4,6 @@ const merge = require('webpack-merge');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
 const ParallelUglifyPlugin = require('webpack-parallel-uglify-plugin');
-const HtmlIncludeAssetsPlugin = require('html-webpack-include-assets-plugin');
 const baseWebpackConfig = require("./webpack.base.conf");
 const webpackFile = require('./webpack.file.conf');
 const CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -26,15 +25,15 @@ let config = merge(baseWebpackConfig, {
             dry: false //启用删除文件
         }),
         new CopyWebpackPlugin([
-            {from: path.resolve('dll/react.dll.js'), to: path.resolve('dist/js')},
+            {from: path.resolve('dll/js'), to: path.resolve('dist/js')},
         ]),
         new webpack.DllReferencePlugin({
             manifest: require(path.join(__dirname, '../../dll', 'react.manifest.json'))
         }),
-        new HtmlIncludeAssetsPlugin({
-            assets: ['js/react.dll.js'],
-            append: false
-        }),
+        // new HtmlIncludeAssetsPlugin({
+        //     assets: ['js/react.dll.js'],
+        //     append: false
+        // }),
         // Compress extracted CSS. We are using this plugin so that possible
         // duplicated CSS from different components can be deduped.
         new OptimizeCSSPlugin({
