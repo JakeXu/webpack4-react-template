@@ -1,0 +1,9 @@
+node_modules/
+dist/
+coverage/
+stats.json
+npm-debug.log*
+.DS_Store
+.idea/
+yarn-error.log
+

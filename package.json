@@ -1,0 +1,53 @@
+{
+  "name": "webpack4-react-template",
+  "version": "1.0.0",
+  "description": "fe construct",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --devtool eval --progress --colors --profile --config config/webpack/webpack.dev.conf.js",
+    "build": "cross-env NODE_ENV=production webpack --progress --colors --config config/webpack/webpack.prod.conf.js",
+    "dll": "webpack --config config/webpack/webpack.dll.config.js --mode production",
+    "remove:build": "rimraf dist"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "jake",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.5.2",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.1",
+    "cross-env": "^5.1.6",
+    "css-loader": "^0.28.11",
+    "file": "^0.2.2",
+    "file-loader": "^1.1.11",
+    "happypack": "^5.0.0",
+    "html-webpack-include-assets-plugin": "^1.0.4",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "optimize-css-assets-webpack-plugin": "^4.0.2",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-loader": "^2.1.5",
+    "precss": "^3.1.2",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.9.1",
+    "webpack-cli": "^2.1.4",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.1.2",
+    "webpack-parallel-uglify-plugin": "^1.1.0"
+  }
+}
